@@ -1,17 +1,17 @@
 ---
 ---
 
-$primary: #E84E40;
+$primary: #0e819b;
 $content-width: 1400px;
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 a {
-    color: inherit;
+    color: $primary;
     text-decoration: none;
     transition: all .2s;
     &:hover {
-        color: $primary;
+        color: inherit;
     }
 }
 
@@ -90,10 +90,8 @@ header {
 }
 
 footer {
-    @extend .drop-shadow;
     padding: 2rem;
-    background-color: $primary;
-    color: white;
+    text-align: center;
 }
 
 #sidebar {
@@ -106,6 +104,12 @@ footer {
     overflow-x: hidden;
     .navigation {
         list-style: none;
+        a {
+            color: inherit;
+            &:hover {
+                color: $primary;
+            }
+        }
         li {
             width: 100%;
             line-height: 2rem;
@@ -161,6 +165,7 @@ footer {
 #page-content {
     background-color: #ffffff;
     padding: 1.5rem;
+    @extend .drop-shadow;
 }
 
 .full-height {
