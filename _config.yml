@@ -31,7 +31,7 @@ sections: [
 baseurl: ''
 
 # Dates are not included in permalinks
-permalink: pretty
+permalink: "/:categories/:title"
 
 # Syntax highlighting
 highlighter: rouge
