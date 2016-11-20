@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Functions"
-category: ref
-date: 2016-11-16 14:19:54
 ---
 
 Functions are declared using the `fun` keyword. Its arguments _must_ be type annotated, and a return type also has to be specified after the parenthesis.

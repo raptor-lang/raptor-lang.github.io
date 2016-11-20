@@ -1,14 +1,26 @@
 <ul class="navigation">
-    <li class="header"><a href="{{ site.baseurl }}/">Home</a></li>
-    {% for section in site.sections %}
-        {% assign attr = section[0] %}
-        {% assign label = section[1] %}
+    {% if include.context == "/" %}
+        <li class="{% if page.url == "/" %}active{% endif %}">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </li>
+    {% endif %}
 
-        {% for p in site.categories[attr] %}
-            {% if forloop.first %}
-                <li class="header">{{ label }}</li>
+    {% for col in site.collections %}
+        {% for entry in col.docs %}
+            {% capture slug    %}{{ entry.url | split: "/"   | last                       }}{% endcapture %}
+            {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: " " | remove: "/ " | rstrip | append: "/" }}{% endcapture %}
+
+            {% if current == include.context %}
+                <div class="{% if page.url contains entry.url %}active{% endif %}">
+                    <a class="{% if page.url == entry.url %}active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+                        <li class="item ">
+                            {{ entry.title }}
+                        </li>
+                    </a>
+                    {% include navigation.html context=entry.url %}
+                </div>
             {% endif %}
-                <a {% if p.url == page.url %}class="active"{% endif %} data-order="{{ p.order }}" href="{{ site.baseurl }}{{ p.url }}"><li class="item">{{ p.title }}</li></a>
+
         {% endfor %}
     {% endfor %}
 </ul>

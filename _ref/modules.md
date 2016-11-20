@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Modules"
-category: ref
-date: 2016-11-16 14:20:46
 ---
 
 A module could be considered a namespace, and is basically a group of data. Every RaptorScript program consists of at least one module, since every file is a module.

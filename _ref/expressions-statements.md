@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Expressions & Statements"
-category: ref
-date: 2016-11-16 14:18:42
 ---
 
 A statement in RaptorScript is one of two things: A declaration or an expression. Everything that is not a function, class or variable declaration is an expression, and expressions are the most important structure. A couple of interesting "special" expressions are worth noting:

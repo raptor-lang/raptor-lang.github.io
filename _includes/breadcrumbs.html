@@ -7,7 +7,8 @@
     {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
     {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
     {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
-    {% for breadcrumb_page in site.posts %}
+    {% for col in site.collections %}
+        {% for breadcrumb_page in col.docs %}
         {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
         {% assign j = forLoopMaxInt | plus: 0 %}
             <li {% if i == j %}class="active"{% endif %}>
@@ -15,6 +16,7 @@
                 <a href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">{{breadcrumb_page.title}}</a>
             </li>
         {% endif %}
+    {% endfor %}
     {% endfor %}
 {% endfor %}
 </ol>

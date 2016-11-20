@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Collections"
-category: ref
-date: 2016-11-16 14:16:16
 ---
 
 ### Vectors

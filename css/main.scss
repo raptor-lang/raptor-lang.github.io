@@ -102,8 +102,17 @@ footer {
     max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    .header {
+        text-transform: uppercase;
+        font-weight: semi-bold;
+    }
+    & > .navigation {
+        padding-left: 0;
+        display: block !important;
+    }
     .navigation {
         list-style: none;
+        display: none;
         a {
             color: inherit;
             &:hover {
@@ -120,12 +129,13 @@ footer {
             font-size: 0.8rem;
         }
         .active {
-            font-weight: 700;
-            color: $primary;
-        }
-        .header {
-            text-transform: uppercase;
-            font-weight: semi-bold;
+            & > li {
+                font-weight: 700;
+                color: $primary;
+            }
+            & > .navigation {
+                display: block;
+            }
         }
     }
 }

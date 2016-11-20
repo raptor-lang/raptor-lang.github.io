@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Control Statements"
-category: ref
-date: 2016-11-16 14:12:52
 ---
 RaptorScript has a fairly standard set of control statements, but there are some slight implementation details that are different, mainly regarding how they use expressions
 
