@@ -5,6 +5,7 @@ $primary: #0e819b;
 $content-width: 1400px;
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import "flexgrid.css";
 
 a {
     color: $primary;
@@ -71,6 +72,8 @@ body {
 }
 
 header {
+    z-index: 100;
+    width: 100%;
     height: 64px;
     background-color: $primary;
     .title {
@@ -86,7 +89,7 @@ header {
 
 
 #site {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 footer {
@@ -96,9 +99,9 @@ footer {
 
 #sidebar {
     text-align: left;
-    position: fixed;
     padding-top: 80px;
     top: 0;
+    position: fixed;
     max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -138,6 +141,13 @@ footer {
             }
         }
     }
+    @media only screen and (max-width: 64em) {
+        position: relative;
+        padding-left: 2rem;
+        background: white;
+        width: 100%;
+        max-height: none;
+    }
 }
 
 .breadcrumb {
@@ -175,6 +185,7 @@ footer {
 #page-content {
     background-color: #ffffff;
     padding: 1.5rem;
+    width: 100%;
     @extend .drop-shadow;
 }
 
@@ -190,4 +201,5 @@ footer {
     max-width: $content-width;
     width: 100%;
     margin: auto;
+    padding: 0 1rem;
 }

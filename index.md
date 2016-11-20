@@ -1,18 +1,16 @@
 ---
 layout: default
-title: "Jekyll Docs Template"
+title: "Home"
 ---
 
-### Get Started
+# RaptorScript Documentation
+RaptorScript is a programming language written as an educational exercise by Topisani and Vel0cityX. It consists of a compiler and a bytecode interpreter. This page contains docs for both tools, along with a basic language specification.
 
-Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categories listed in `_config.yml`. It will appear in the navigation on the left once recompiled. Or use the supplied script to make creating pages easier:
+## The language itself
 
-```bash
-ruby bin/jekyll-page "Some Page Title" ref
-```
+RaptorScript's Syntax is aimed at being intuitive to write, while not necessarily sticking to convention. This is a balance we are always working towards.
 
-#### Don't Forget
+The language borrows syntax, as it does with features, from a lot of different places. Notable mentions would be Rust and Scala, along with Python.
 
-- Add your own content to this page (i.e. `index.md`) and change the `title`
-- Change `title` and `subtitle` defined in `config.yml` for your site
-- Set the `baseurl` in `_config.yml` for your repo if deploying to GitHub pages
+Many of these points will have a few options, as we are still deciding on which
+one of them to go with.
