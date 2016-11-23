@@ -107,6 +107,7 @@ footer {
     overflow-x: hidden;
     & > .navigation {
         display: block !important;
+        padding-left: 0 !important;
         & > div {
             text-transform: uppercase;
             font-weight: normal;
@@ -130,7 +131,7 @@ footer {
         display: none;
         text-transform: none;
         font-weight: normal;
-        padding-left: calc(1rem + 3px);
+        padding-left: 2rem;
         a {
             color: inherit;
             &:hover {
