@@ -1,8 +1,12 @@
 <ul class="navigation">
     {% if include.context == "/" %}
-        <li class="{% if page.url == "/" %}active{% endif %}">
-            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </li>
+        <div class="{% if page.url == '/' %}active{% endif %}">
+            <a class="{% if page.url == '/' %}active{% endif %}" href="/">
+                <li class="item ">
+                    Home
+                </li>
+            </a>
+        </div>
     {% endif %}
 
     {% for col in site.collections %}

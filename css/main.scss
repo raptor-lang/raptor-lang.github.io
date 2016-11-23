@@ -105,17 +105,32 @@ footer {
     max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    .header {
-        text-transform: uppercase;
-        font-weight: semi-bold;
-    }
     & > .navigation {
-        padding-left: 0;
         display: block !important;
+        & > div {
+            text-transform: uppercase;
+            font-weight: normal;
+            & > a {
+                .item {
+                    font-weight: normal;
+                    font-size: 1rem;
+                    border: none;
+                    line-height: 2.1rem;
+                    padding: 0;
+                }
+            }
+            & > .navigation {
+                display: block;
+                padding-left: 2px;
+            }
+        }
     }
     .navigation {
         list-style: none;
         display: none;
+        text-transform: none;
+        font-weight: normal;
+        padding-left: calc(1rem + 3px);
         a {
             color: inherit;
             &:hover {

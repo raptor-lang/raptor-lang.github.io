@@ -25,11 +25,7 @@
         <div id="site" class="content-width">
             <div class="row full-height">
                 <div id="sidebar" class="col-md-3">
-                    {% for col in site.collections %}
-                        <span class="header">{{col.title}}</span>
-                        {% capture ctx %}/{{col.label}}/{% endcapture %}
-                        {% include navigation.html context=ctx %}
-                    {% endfor %}
+                        {% include navigation.html context="/" %}
                 </div>
                 <div class="col-md-3"> </div>
                 <div class="col-md-8">
